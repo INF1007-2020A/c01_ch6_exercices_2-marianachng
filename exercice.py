@@ -21,34 +21,36 @@ def color_name_to_hex(colors: list) -> list:
 
 def odd_integer_for_loop(end: int) -> list:
     odd_numbers = []
-    number = 0
-    while number <= end:
+    for number in range (end+1):
         if number % 2 == 1:
             odd_numbers.append(number)
-            number += 1
-        else:
-            number += 1
     return odd_numbers
 
 
 def odd_integer_list_comprehension(end: int) -> list:
     return [num for num in end if num % 2 == 1]
 
-
 def loop_traversal(integers: list) -> None:
-    pass
+    for value in integers:
+        print (value, integers.index(value))
 
 
-def word_dict_for_loop() -> dict:
-    return {}
+def word_dict_for_loop(words) -> dict:
+    
+    new_dict = {}
+    for word in words:
+        new_dict[word[0].upper()] = word
+    return new_dict
 
 
-def word_dict_comprehension() -> dict:
-    return {}
+def word_dict_comprehension(words) -> dict:
+    return {word[0].upper(): word for word in words}
 
 
 def dictionary_traversal(words: dict) -> None:
     pass
+    
+
 
 
 def main() -> None:
@@ -63,17 +65,17 @@ def main() -> None:
     print(f"Liste avec boucle for et le nombre 13: {integers_for}")
     integers_comprehension = odd_integer_for_loop(integer)
     print(f"Liste avec list comprehension et le nombre 13: {integers_comprehension}")
-#
-    #print(f"Les 2 listes sont-elles identiques? {integers_for == integers_comprehension}")
-    #print(f"Parcours d'une des 2 listes...")
-    #loop_traversal(integers_for)
-#
-    #words = ["initialisation", "ajout", "modification", "suppression", "dictionnaire"]
-    #words_for = word_dict_for_loop(words)
-    #print(f"Dictionnaire avec la boucle for: {words_for}")
-    #words_comprehension = word_dict_comprehension(words)
-    #print(f"Dictionnaire avec le dictionary comprehension: {words_comprehension}")
-#
+
+    print(f"Les 2 listes sont-elles identiques? {integers_for == integers_comprehension}")
+    print(f"Parcours d'une des 2 listes...")
+    loop_traversal(integers_for)
+
+    words = ["initialisation", "ajout", "modification", "suppression", "dictionnaire"]
+    words_for = word_dict_for_loop(words)
+    print(f"Dictionnaire avec la boucle for: {words_for}")
+    words_comprehension = word_dict_comprehension(words)
+    print(f"Dictionnaire avec le dictionary comprehension: {words_comprehension}")
+
     #print(f"Les 2 dictionnaires sont-ils identiques? {words_for == words_comprehension}")
     #print(f"Parcours d'un des 2 dictionnaires...")
     #loop_traversal(words_comprehension)
