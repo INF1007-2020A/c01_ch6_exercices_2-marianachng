@@ -2,8 +2,8 @@ test_color_name_to_hex (__main__.TestExercice) ... ERROR
 test_list_to_dict (__main__.TestExercice) ... ok
 test_odd_integer_for_loop (__main__.TestExercice) ... ok
 test_odd_integer_list_comprehension (__main__.TestExercice) ... ERROR
-test_word_dict_comprehension (__main__.TestExercice) ... ERROR
-test_word_dict_for_loop (__main__.TestExercice) ... ERROR
+test_word_dict_comprehension (__main__.TestExercice) ... ok
+test_word_dict_for_loop (__main__.TestExercice) ... ok
 
 ======================================================================
 ERROR: test_color_name_to_hex (__main__.TestExercice)
@@ -23,27 +23,11 @@ ERROR: test_odd_integer_list_comprehension (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 55, in test_odd_integer_list_comprehension
     output = exercice.odd_integer_list_comprehension(integer)
-  File "/home/runner/work/c01_ch6_exercices_2-marianachng/c01_ch6_exercices_2-marianachng/exercice.py", line 35, in odd_integer_list_comprehension
+  File "/home/runner/work/c01_ch6_exercices_2-marianachng/c01_ch6_exercices_2-marianachng/exercice.py", line 31, in odd_integer_list_comprehension
     return [num for num in end if num % 2 == 1]
 TypeError: 'int' object is not iterable
-
-======================================================================
-ERROR: test_word_dict_comprehension (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 77, in test_word_dict_comprehension
-    output = exercice.word_dict_comprehension(words)
-TypeError: word_dict_comprehension() takes 0 positional arguments but 1 was given
-
-======================================================================
-ERROR: test_word_dict_for_loop (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 66, in test_word_dict_for_loop
-    output = exercice.word_dict_for_loop(words)
-TypeError: word_dict_for_loop() takes 0 positional arguments but 1 was given
 
 ----------------------------------------------------------------------
 Ran 6 tests in 0.001s
 
-FAILED (errors=4)
+FAILED (errors=2)
