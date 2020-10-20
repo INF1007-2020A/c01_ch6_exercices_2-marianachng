@@ -56,6 +56,8 @@ def word_dict_comprehension(words) -> dict:
 
 
 def dictionary_traversal(words: dict) -> None:
+    #deux facons de faire 
+
     for index, (key, value) in enumerate(sorted(words.items(), key=lambda x: x[0])):
         print(index, key, value)
 
