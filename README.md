@@ -2,16 +2,17 @@
 
 
 
+
 ## Résultats
 Score | Critères
 --- | ---
-0/1 | Couleur -> Hex
+1/1 | Couleur -> Hex
 1/1 | Liste -> dictionnaire
 1/1 | Liste (for)
 0/1 | Liste (comprehension)
 1/1 | Dictionnaire (comprehension)
 1/1 | Dictionnaire (for)
-4/6 | **Total**
+5/6 | **Total**
 
 [Voir détails](./logs/tests_results.txt) | [Rafraîchir](../../)
 # Exercices en vrac (chapitre 6.2)
