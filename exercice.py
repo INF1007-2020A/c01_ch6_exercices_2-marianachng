@@ -12,12 +12,16 @@ def list_to_dict(some_list: list) -> dict:
     return new_dict
 
 def color_name_to_hex(colors: list) -> list:
-    # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
+    # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple
+    # où le premier élément est le nom de la couleur et le deuxième est la valeur hex.
+
+    # SOLUTION AVEC LISTE
     #coloursHex = []
     #for color in colors:
     #    coloursHex.append((color, cnames[color]))
     #return coloursHex
     
+    #SOLUTION AVEC COMPREHENSION LIST 
     return [(color, cnames[color]) for color in colors]
 
 def odd_integer_for_loop(end: int) -> list:
@@ -35,6 +39,9 @@ def loop_traversal(integers: list) -> None:
     for index, banane in enumerate(integers):
         print(index,banane)
 
+# Remarques: 
+# PAS DE RETURN !!! CAR NE RETOURNE RIEN !!!
+#FONCTION ENUMERATE RETOURNE UN TUPLE !
 
 def word_dict_for_loop(words) -> dict:
     
